@@ -1,0 +1,18 @@
+[
+   {
+      "id": 1,
+      "name": "Adabyot",
+      "author": "Kimdir",
+      "count": 0,
+      "category_id": 5,
+      "created_at": "2023-07-03"
+   },
+   {
+      "id": 2,
+      "name": "Oq kema",
+      "author": "Chingiz",
+      "count": 2,
+      "category_id": 1,
+      "created_at": "2023-07-03"
+   }
+]

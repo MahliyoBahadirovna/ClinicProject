@@ -1,0 +1,165 @@
+******P15******
+******YO'LDOSHQULOVA MAHLIYO*******
+******2_modul Exam******
+
+
+1_misol
+
+
+file = open('abcd.txt', 'r')
+arr = list(map (str, file.read().split()))
+for i in range(len(arr)):
+    if i % 2 == 0:
+        arr[i] = "00"
+f = open('exam.txt', 'w')
+for i in range(len(arr)):
+    f.write(f'{arr[i]} ')
+
+
+2_misol
+
+
+file = open('exam.txt', 'r')
+arr = list(map (str, file.read().split()))
+for i in range(len(arr)):
+    if not i % 2 == 0:
+        arr[i] = arr[i] + ' ' + arr[i]
+f = open('exam.txt', 'w')
+for i in range(len(arr)):
+    f.write(f' {arr[i]} ')
+
+
+3_misol
+
+
+file = open('exam.txt', 'r')
+arr = list(map (str, file.read().split()))
+for i in range(len(arr)):
+    arr[i] = arr[i].replace('  ', ' ')
+str = open('exam1.txt', 'a')
+for i in range(len(arr)):
+    str.write(f'{arr[i]} ')
+
+
+4_misol
+
+
+s = input('s satr kiriting: ')
+s1 = input('s1 satr kiriting: ')
+s2 = input('s2 satr kiriting: ')
+s = s.replace(s1, s2, 1)
+print(f's sartdagi s1 satrlar s2 satri bilan almashtrildi:  {s}')
+
+
+
+5_misol
+
+
+class Son:
+    def __init__(self, son: int):
+        self.son = son
+
+    def RimBirlar(self):
+        satr = ''
+        self.xona = self.son % 10
+        if self.xona == 1:
+            satr = "I"
+        elif self.xona == 2:
+            satr = "II"
+        elif self.xona == 3:
+            satr = "III"
+        elif self.xona == 4:
+            satr = "IV"
+        elif self.xona == 5:
+            satr = "V"
+        elif self.xona == 6:
+            satr = "VI"
+        elif self.xona == 7:
+            satr = "VII"
+        elif self.xona == 8:
+            satr = "VIII"
+        elif self.xona == 9:
+            satr = "IX"
+        else:
+            satr = "X"
+        return satr
+
+
+    def RimOnlar(self):
+        satr=''
+        self.xona=self.son %10
+
+        if self.xona ==20:
+            satr.xona="XX"
+        elif self.xona == 30:
+            self.xona="XXX"
+        elif self.xona==40:
+            self.xona="XL"
+        elif self.xona==50:
+            self.xona="L"
+        elif self.xona ==60:
+            satr.xona="LX"
+        elif self.xona == 70:
+            self.xona="LXX"
+        elif self.xona==80:
+            self.xona="LXXX"
+        elif self.xona==90:
+            self.xona="XC"
+        elif self.xona==100:
+            self.xona="C"
+
+
+
+s=int(input(" 1 dan 10gacha son kiriting: "))
+obj = Son(s)
+obj1=Son(s)
+print(f' {obj1.RimOnlar()} {obj.RimBirlar()}')
+
+6_misol
+
+
+class SanoqSystem:
+    def __init__(self, number):
+        self.number = number
+
+    def sanoq_2(self):
+        sum2 = ""
+        while self.number > 0:
+            sum2 = str(self.number % 2) + sum2
+            self.number //= 2
+        return sum2
+
+    def sanoq_8(self):
+        sum8 = ""
+        while self.number > 0:
+            sum8 = str(self.number % 8) + sum8
+            self.number //= 8
+        return sum8
+
+    def sanoq_16(self):
+        sum16 = ""
+        while self.number > 0:
+            if (self.number % 16) == 10:
+                sum16 = 'A' + sum16
+            elif (self.number % 16) == 11:
+                sum16 = 'B' + sum16
+            elif (self.number % 16) == 12:
+                sum16 = 'C' + sum16
+            elif (self.number % 16) == 13:
+                sum16 = 'D' + sum16
+            elif (self.number % 16) == 14:
+                sum16 = 'E' + sum16
+            elif (self.number % 16) == 15:
+                sum16 = 'F' + sum16
+            else:
+                sum16 = str(self.number % 16) + sum16
+            self.number //= 16
+        return sum16
+
+n = int(input("son kiriting: "))
+obj2 = SanoqSystem(n)
+obj8 = SanoqSystem(n)
+obj16 = SanoqSystem(n)
+print(obj2.sanoq_2())
+print(obj8.sanoq_8())
+print(obj16.sanoq_16())

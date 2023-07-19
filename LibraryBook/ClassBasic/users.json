@@ -1,0 +1,31 @@
+[
+   {
+      "id": 1,
+      "fullname": "Botirjon",
+      "phone_number": "+998993583234",
+      "card_id": "29622747",
+      "books": [
+         {
+            "id": 2,
+            "name": "Oq kema",
+            "author": "Chingiz",
+            "created_at": "2023-07-03 15:03:20.799396"
+         },
+         {
+            "id": 1,
+            "name": "Adabyot",
+            "author": "Kimdir",
+            "created_at": "2023-07-03 15:05:15.570635"
+         }
+      ],
+      "created_at": "2023-07-03"
+   },
+   {
+      "id": 2,
+      "fullname": "mahliyo",
+      "phone_number": "880340447",
+      "card_id": "62054616",
+      "books": [],
+      "created_at": "2023-07-07"
+   }
+]
